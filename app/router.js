@@ -9,7 +9,9 @@ Router.map(function() {
   this.route('index', {path: '/'});
   this.route('users/new');
   this.route('user');
-  this.route('conversation');
+  this.resource('conversation', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

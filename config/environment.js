@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'people-with-puppies',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    firebase: 'https://flickering-fire-561.firebaseio.com',
+    firebase: 'https://peoplewithpuppies.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
