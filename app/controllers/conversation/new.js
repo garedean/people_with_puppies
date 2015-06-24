@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  needs: ['user'],
+  needs: ['users'],
 
   actions: {
     addConversation: function() {
@@ -34,8 +34,9 @@ export default Ember.Controller.extend({
         body: ''
       });
 
-      var firstUser = this.get('controllers.user.model');
-      user.get('conversation').pushObject(newConversation);
+      var firstUser = this.get('controllers.users.model');
+      debugger;
+      firstUser.get('conversation').pushObject(newConversation);
       this.get('model').reload();
       this.transitionTo('conversation');
     }
