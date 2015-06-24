@@ -10,6 +10,8 @@ Router.map(function() {
   this.resource('users/new', {path: 'new-user'});
   this.route('user');
   this.resource('users');
+  this.resource('user', {path: 'users/:user_id'});
+  //this.resource('match', { path: 'match/:match_id'});
   this.resource('match');
   this.route('conversation');
 });

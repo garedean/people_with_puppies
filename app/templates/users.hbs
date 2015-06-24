@@ -9,23 +9,23 @@
     <ul class="users-list">
       {{#each user in model}}
 
-        <li>
+        <!-- <li>
           <span><img src='{{user.picture}}' height = "100em" width = "100em"><br>{{user.name}}</span> <br>
           {{user.location}}
             <br>
             Bio {{user.bio}}
             <br>
             Interests: {{user.interestedIn}}
-        </li>
+        </li> -->
 
 
-        <!-- {{#link-to 'user' user}}
+        {{#link-to 'user' user}}
           <li>
             {{user.name}}
-            <span class="question">{{question.text}}</span>
-            <span class="author">Asked by {{question.author}}</span>
+            <!-- <span class="question">{{question.text}}</span>
+            <span class="author">Asked by {{question.author}}</span> -->
           </li>
-        {{/link-to}} -->
+        {{/link-to}}
       {{/each}}
     </ul>
   </div>

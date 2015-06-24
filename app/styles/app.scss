@@ -5,6 +5,12 @@ h1.page-header a {
   }
 }
 
+.container {
+  > .row {
+    margin-top: 50px;
+  }
+}
+
 .users-list {
   margin-top: 30px;
   li {
@@ -15,4 +21,43 @@ h1.page-header a {
   li:last-child {
     border-bottom: 1px solid #eee;
   }
+}
+
+.user-preview {
+  width: 400px;
+  margin: 40px auto 0;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    color: #666;
+    font-size: .9em;
+  }
+}
+
+.choose-match-wrapper {
+  a {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    background: #eee;
+    margin: 0px 10px;
+    border-radius: 50%;
+    i {
+      font-size: 30px;
+      line-height: 65px;
+      color: #ddd;
+    }
+    &:hover {
+      background: #e5e5e5;
+      i {
+        color: #bbb;
+      }
+    }
+  }
+}
+
+.fitted-image {
+  width: 100%;
 }
