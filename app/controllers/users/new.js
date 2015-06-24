@@ -6,7 +6,6 @@ var NewUserController = {
       var newUser = this.store.createRecord('user', {
         name: this.get('user_name')
       });
-
       newUser.save();
       //
       // this.set('author', '');
