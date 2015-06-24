@@ -1,0 +1,19 @@
+
+
+
+<!-- <p {{action 'debug'}}>debug</p> -->
+
+<div class="new-msg-link">{{#link-to 'conversations.new'}}Add a new conversation{{/link-to}}</div>
+
+
+{{outlet}}
+
+<p>Show Conversations</p>
+
+{{#each conversation in model}}
+<div class="each-msg">user {{conversation.user.name}}:
+  {{#each message in model.conversation}}
+    {{message.body}}
+  {{/each}}
+</div>
+{{/each}}
