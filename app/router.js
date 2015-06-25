@@ -10,10 +10,9 @@ Router.map(function() {
   this.resource('users', function() {
     this.resource('user', {path:'/:user_id'}, function() {
       this.resource('conversations', function() {
-        this.route('recipient', {path: ':recipient_id'}, function() {
+        this.route('recipient', {path: '/:recipient_id'}, function() {
+          this.route('new');
         });
-        this.route('new');
-
       });
     });
   });
