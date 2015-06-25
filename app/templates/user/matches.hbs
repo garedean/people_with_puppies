@@ -1,0 +1,8 @@
+{{#each user in model.matches}}
+
+  {{#link-to 'user' user}}
+    <li>
+      {{user.name}}
+    </li>
+  {{/link-to}}
+{{/each}}

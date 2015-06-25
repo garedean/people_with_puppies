@@ -9,9 +9,9 @@ Router.map(function() {
   this.route('index', {path: '/'});
   this.resource('users');
   this.resource('users/new', {path: '/new-user'});
-
-  this.resource('user', {path: '/users/:user_id'});
-
+  this.resource('user', {path: '/users/:user_id'}, function() {
+    this.route('matches');
+  });
   this.resource('match', {path: '/users/:user_id/match'});
   this.route('conversation');
 });

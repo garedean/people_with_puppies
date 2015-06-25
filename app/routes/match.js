@@ -7,17 +7,14 @@ export default Ember.Route.extend({
 
       // Array of String user ids
       var usersArray = [];
-      var returnedUser;
+      var randomUserId;
+
       users.map(function(user) {
         usersArray.push(user.get('id'))
       });
-      returnedUser = usersArray[Math.floor((Math.random() * (usersArray.length)))];
-      return controller.store.find('user', returnedUser);
+
+      randomUserId = usersArray[Math.floor((Math.random() * (usersArray.length)))];
+      return controller.store.find('user', randomUserId);
     });
   }
-
-  // setupController: function(controller, model) {
-  //   controller.set('params', this.get('params'));
-  //   this._super(controller, model);
-  // }
 });

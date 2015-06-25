@@ -37,7 +37,7 @@ h1.page-header a {
 }
 
 .choose-match-wrapper {
-  a {
+  span {
     display: inline-block;
     height: 65px;
     width: 65px;
@@ -50,6 +50,7 @@ h1.page-header a {
       color: #ddd;
     }
     &:hover {
+      cursor: pointer;
       background: #e5e5e5;
       i {
         color: #bbb;

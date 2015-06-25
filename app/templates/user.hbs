@@ -10,6 +10,15 @@
       <li>Looking for: {{model.interestedIn}}</li>
     </ul>
 
-    {{#link-to 'match' model.id}}Find Matches{{/link-to}}
+    <p>
+      {{#link-to 'match' model.id}}Find Matches{{/link-to}}
+    </p>
+
+    <p>
+      {{#link-to 'user.matches' model.id}}Show Matches{{/link-to}}
+    </p>
+
+    {{outlet}}
+
   </div>
 </div>

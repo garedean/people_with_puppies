@@ -1,19 +1,20 @@
 import Ember from "ember";
 
 var MatchController = {
+  needs: ['user', 'users'],
 
   actions: {
     likePerson: function() {
-      debugger;
-      var likedPerson = this.store.find('user', this.get('model').id);
-      debugger;
+      // JavaScript object. Use example: likedUser.name
+      var likedUser     = this.get('model');
 
-      //var newLike = this.store.find('user', this.get('person_id'));
-      var user = this.store.find('user', this.get('user_id'));
-      user.matches.push(newLike);
-      user.save();
+      // Promise object. Use example: loggedInUser.get('name')
+      var loggedInUser  = this.get('controllers.user.model');
 
-      this.transitionToRoute('/');
+      loggedInUser.get('matches').pushObject(likedUser);
+      loggedInUser.save();
+
+      this.transitionToRoute('/' + 'users/' + loggedInUser.get('id'));
     }
   }
 };
