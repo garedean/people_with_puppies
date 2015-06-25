@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  needs: ['user'],
+  needs: ['user', 'users'],
 
   actions: {
     addConversation: function() {
@@ -30,17 +30,28 @@ export default Ember.Controller.extend({
 
 
       this.setProperties({
-        // name: '',
+        messageTo: '',
         body: ''
       });
 
-      // var firstUser = this.store.find('user')
 
       var firstUser = this.get('controllers.user.model');
-      // debugger;
       firstUser.get('conversations').pushObject(newConversation);
       // this.get('model').reload();
       firstUser.save();
+
+//
+
+      var secondUserName = this.get('messageTo');
+
+      var secondUser = this.store.find('user', { name: secondUserName });
+      var secondUser2 = this.store.find('user', "-Jsbvs12QPglBJ_wNjhk");
+
+debugger;
+      secondUser.get('conversations').pushObject(newConversation);
+      // this.get('model').reload();
+      secondUser.save();
+
       this.transitionTo('user', firstUser.id);
     }
   }

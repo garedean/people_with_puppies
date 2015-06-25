@@ -1,19 +1,28 @@
 
-
-
-<!-- <p {{action 'debug'}}>debug</p> -->
-
-<div class="new-msg-link">{{#link-to 'conversations.new'}}Add a new conversation{{/link-to}}</div>
-
-
 {{outlet}}
 
 <p>Show Conversations</p>
-
+<!-- show just this user, then just the conversation with person X (or all above) -->
 {{#each conversation in model}}
-<div class="each-msg">user {{conversation.user.name}}:
-  {{#each message in model.conversation}}
-    {{message.body}}
+<div class="each-msg">
+
+  {{#each user in conversation.users}}
+  user {{#link-to 'conversations.recipient' user.id}}{{user.name}}{{/link-to}} and
   {{/each}}
+
+  <p>messages:</p>
+  <ul>
+  {{#each message in conversation.messages}}
+    <li> {{message.body}} </li>
+  {{/each}}
+  </ul>
+
 </div>
 {{/each}}
+
+<div class="new-msg-link">{{#link-to 'conversations.new'}}Add a new conversation{{/link-to}}</div>
+<!-- <div class="new-msg-link">{{#link-to 'mailee' mailee.id}}Add a new conversation{{/link-to}}</div> -->
+
+
+
+<!-- returns array of conversations with this user id in them -->

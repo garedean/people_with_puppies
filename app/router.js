@@ -7,15 +7,16 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('index', {path: '/'});
-  // this.route('users/new');
   this.resource('users', function() {
     this.resource('user', {path:'/:user_id'}, function() {
       this.resource('conversations', function() {
+        this.route('recipient', {path: ':recipient_id'}, function() {
+        });
         this.route('new');
+
       });
-      // this.route('new');
     });
-  })
+  });
 });
 
 export default Router;

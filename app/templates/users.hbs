@@ -1,6 +1,4 @@
 {{#each user in model}}
-{{#link-to 'user' user.id}}
-{{user.name}}
-{{/link-to}}
+{{#link-to 'user' user.id}}{{user.name}}{{/link-to}}-
 {{/each}}
 {{outlet}}
