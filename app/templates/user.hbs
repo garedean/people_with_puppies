@@ -14,11 +14,18 @@
       {{#link-to 'match' model.id}}Find Matches{{/link-to}}
     </p>
 
-    <p>
-      {{#link-to 'user.matches' model.id}}Show Matches{{/link-to}}
-    </p>
+    <h3 class="text-center">Matches</h3>
+    <ul class="lined-list list-unstyled">
 
-    {{outlet}}
+      {{#each user in model.matches}}
+
+      {{#link-to 'user' user}}
+      <li>
+        {{user.name}}
+      </li>
+      {{/link-to}}
+      {{/each}}
+    </ul>
 
   </div>
 </div>

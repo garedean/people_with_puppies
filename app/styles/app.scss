@@ -1,4 +1,6 @@
 h1.page-header a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   &:hover {
     text-decoration: none;
     color: default;
@@ -55,6 +57,20 @@ h1.page-header a {
       i {
         color: #bbb;
       }
+    }
+  }
+}
+
+.lined-list {
+  margin-top: 20px;
+  
+  li {
+    padding: 7px 0;
+    border-top: 1px solid #eee;
+    font-size: 1.3em;
+
+    &:last-child {
+      border-bottom: 1px solid #eee;
     }
   }
 }
