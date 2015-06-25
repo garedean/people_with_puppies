@@ -6,11 +6,21 @@
 </div>
 
 <p class="text-center choose-match-wrapper">
-  {{#link-to '' classNames="downvote"}}
+  <!-- {{#link-to '' classNames="downvote"}}
     {{fa-icon "remove"}}
   {{/link-to}}
 
   {{#link-to '' classNames="upvote"}}
     {{fa-icon "heart"}}
-  {{/link-to}}
+  {{/link-to}} -->
+
+  <button {{action 'unlikePerson'}} class="downvote">
+    {{fa-icon "remove"}}
+  </button>
+
+  <button {{action 'likePerson'}} class="upvote">
+    {{fa-icon "heart"}}
+  </button>
+
+
 </p>
