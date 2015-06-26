@@ -1,13 +1,24 @@
 
-{{outlet}}
 
-<p>Show Conversations</p>
-<!-- show just this user, then just the conversation with person X (or all above) -->
+<p>Your Chats</p>
+
 {{#each conversation in model}}
+  <p>{{conversation}}</p>
+{{/each}}
+
+<p>New Chat</p>
+<div class="new-msg-form">
+  <!-- {{input type="text" placeholder="Recipient" value=messageTo class="messageTo-input"}} -->
+  {{input type="text" placeholder="Message" value=body class="msg-input"}}
+  <button {{action 'addConversation'}} class='submit'>Submit</button>
+</div>
+
+
+<!-- {{#each conversation in model}}
 <div class="each-msg">
 
   {{#each user in conversation.users}}
-  user {{#link-to 'conversations.recipient' user.id}}{{user.name}}{{/link-to}} and
+  user: {{#link-to 'conversations.recipient' user.id}}{{user.name}}{{/link-to}} and
   {{/each}}
 
   <p>messages:</p>
@@ -18,7 +29,9 @@
   </ul>
 
 </div>
-{{/each}}
+{{/each}} -->
+
+<!-- {{outlet}} -->
 
 <!-- <div class="new-msg-link">{{#link-to 'conversations.new'}}Add a new conversation{{/link-to}}</div> -->
 <!-- <div class="new-msg-link">{{#link-to 'mailee' mailee.id}}Add a new conversation{{/link-to}}</div> -->
