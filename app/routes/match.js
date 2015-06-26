@@ -22,7 +22,7 @@ export default Ember.Route.extend({
           currentUser = user
         };
       })
-      currentUser.get('matches').forEach(function(match){
+      currentUser.get('likes').forEach(function(match){
         currentMatches.push(match)
       });
 
@@ -43,7 +43,6 @@ export default Ember.Route.extend({
       var potentialMatches = potentialMatches.filter(function(id) {
         return excludedIDs.indexOf(id) === -1;
       });
-
       randomUserId = potentialMatches[Math.floor((Math.random() * (potentialMatches.length)))];
       return controller.store.find('user', randomUserId);
     });

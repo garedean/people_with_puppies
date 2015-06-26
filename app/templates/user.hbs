@@ -6,7 +6,7 @@
     <ul class="list-unstyled">
       <li>Name: {{model.name}}</li>
       <li>Bio: {{model.bio}}</li>
-      <li>Lovation: {{model.location}}</li>
+      <li>Location: {{model.location}}</li>
       <li>Looking for: {{model.interestedIn}}</li>
     </ul>
 
@@ -16,6 +16,8 @@
 
     <h3 class="text-center">Matches</h3>
     <ul class="lined-list list-unstyled">
+
+      <!-- <button class='btn btn-info' {{ action 'findMatches'}}> Find Matches </button> -->
 
       {{#each user in model.matches}}
 

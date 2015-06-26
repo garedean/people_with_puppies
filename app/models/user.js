@@ -6,6 +6,7 @@ export default DS.Model.extend({
   bio: DS.attr('string'),
   picture: DS.attr('string'),
   location: DS.attr('string'),
+  likes: DS.hasMany('like', {async: true}),
   matches: DS.hasMany('user', {async: true}),
   conversations: DS.hasMany('conversation', {async: true})
 });
