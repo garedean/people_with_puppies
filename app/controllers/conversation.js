@@ -43,8 +43,8 @@ export default Ember.Controller.extend({
   //
 
         // var secondUserName = this.get('messageTo');
-var secondUserId = this.model.get('recipient_id');
-
+var secondUserId = this.model.get('recipient_id'); //this doesn't work obviously
+debugger;
         var secondUser = this.store.find('user', { id: secondUserId });
         // var secondUser2 = this.store.find('user', "-Jsbvs12QPglBJ_wNjhk");
 
