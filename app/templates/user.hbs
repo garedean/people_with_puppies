@@ -24,13 +24,21 @@
 
       {{#each user in model.matches}}
 
-      {{#link-to 'user' user}}
       <li>
-        {{user.name}}
+        {{#link-to 'user' user}}
+            {{user.name}}
+        {{/link-to}}
+        -
+        ({{#link-to 'conversation' user}}
+            Chat
+        {{/link-to}})
       </li>
-      {{/link-to}}
+
+
       {{/each}}
     </ul>
 
   </div>
 </div>
+
+{{outlet}}

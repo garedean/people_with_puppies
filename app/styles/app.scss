@@ -8,6 +8,7 @@ nav.header-top {
   background: white;
   opacity: .8;
   border-bottom: 1px solid #eee;
+  z-index: 9999;
 }
 
 .welcome {
@@ -15,7 +16,7 @@ nav.header-top {
     &:hover {
       color: white;
     }
-  }    
+  }
 }
 
 
