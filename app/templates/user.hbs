@@ -1,4 +1,37 @@
-<p>{{model.name}}
-<img src='{{model.picture}}' width="100">
-{{model.bio}}</p>
-{{outlet}}
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+
+    <img src={{model.picture}} class="fitted-image">
+
+    <ul class="list-unstyled">
+      <li>Name: {{model.name}}</li>
+      <li>Bio: {{model.bio}}</li>
+      <li>Lovation: {{model.location}}</li>
+      <li>Looking for: {{model.interestedIn}}</li>
+    </ul>
+
+    <p>
+      {{#link-to 'match' model.id}}Find Matches{{/link-to}}
+    </p>
+
+    <h3 class="text-center">Matches</h3>
+    <ul class="lined-list list-unstyled">
+
+      {{#each user in model.matches}}
+
+      <li>
+        {{#link-to 'user' user}}
+            {{user.name}}
+        {{/link-to}}
+        ---
+        {{#link-to 'conversation' user}}
+            Send Message
+        {{/link-to}}
+      </li>
+
+
+      {{/each}}
+    </ul>
+
+  </div>
+</div>

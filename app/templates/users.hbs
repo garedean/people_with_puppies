@@ -1,4 +1,31 @@
-{{#each user in model}}
-{{#link-to 'user' user.id}}{{user.name}}{{/link-to}}-
-{{/each}}
-{{outlet}}
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul class="users-list">
+
+      <p> Click on your name to Login! </p>
+
+      {{#each user in model}}
+
+        <!-- <li>
+          <span><img src='{{user.picture}}' height = "100em" width = "100em"><br>{{user.name}}</span> <br>
+          {{user.location}}
+            <br>
+            Bio {{user.bio}}
+            <br>
+            Interests: {{user.interestedIn}}
+        </li> -->
+
+
+
+
+        {{#link-to 'user' user}}
+          <li>
+            {{user.name}}
+            <!-- <span class="question">{{question.text}}</span>
+            <span class="author">Asked by {{question.author}}</span> -->
+          </li>
+        {{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
