@@ -1,12 +1,15 @@
 
 
-<p>Your Chats</p>
-{{model}}
+<p>Your Chats:</p>
+<ul>
 {{#each conversation in model}}
-  {{conversation.messages}}
+  {{#each message in conversation.messages}}
+    <li>{{message.body}}</li>
+  {{/each}}
 {{/each}}
+</ul>
 
-<p>New Chat</p>
+<p>New Chat:</p>
 <div class="new-msg-form">
   <!-- {{input type="text" placeholder="Recipient" value=messageTo class="messageTo-input"}} -->
   {{input type="text" placeholder="Message" value=body class="msg-input"}}
