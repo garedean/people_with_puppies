@@ -1,20 +1,25 @@
 <div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
+  <div class="col-sm-6 col-sm-offset-1 user-preview">
 
     <img src={{model.picture}} class="fitted-image">
 
-    <ul class="list-unstyled">
+    <ul class="list-unstyled user-info">
       <li>Name: {{model.name}}</li>
       <li>Bio: {{model.bio}}</li>
       <li>Lovation: {{model.location}}</li>
       <li>Looking for: {{model.interestedIn}}</li>
+
     </ul>
+  </div>
+
+  <div class="col-sm-3 col-sm-offset-1 text-center">
+
+    <h3 class="text-center">Matches</h3>
 
     <p>
       {{#link-to 'match' model.id}}Find Matches{{/link-to}}
     </p>
 
-    <h3 class="text-center">Matches</h3>
     <ul class="lined-list list-unstyled">
 
       {{#each user in model.matches}}
