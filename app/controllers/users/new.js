@@ -16,7 +16,8 @@ var NewUserController = {
       this.set('user_bio', '');
       this.set('user_pic', '');
       this.set('user_location', '');
-      this.set('user_interests', '');      
+
+      this.set('user_interests', '');
 
       this.transitionToRoute('/');
     }
