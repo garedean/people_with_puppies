@@ -1,9 +1,9 @@
 
 
 <p>Your Chats</p>
-
+{{model}}
 {{#each conversation in model}}
-  <p>{{conversation}}</p>
+  {{conversation.messages}}
 {{/each}}
 
 <p>New Chat</p>

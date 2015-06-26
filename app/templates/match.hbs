@@ -1,0 +1,26 @@
+<div class="user-preview">
+  <img src='{{model.picture}}' width="400">
+  <p>
+    {{this.name}}
+  </p>
+</div>
+
+<p class="text-center choose-match-wrapper">
+  <!-- {{#link-to '' classNames="downvote"}}
+    {{fa-icon "remove"}}
+  {{/link-to}}
+
+  {{#link-to '' classNames="upvote"}}
+    {{fa-icon "heart"}}
+  {{/link-to}} -->
+
+  <span {{action 'unlikePerson'}} class="downvote">
+    {{fa-icon "remove"}}
+  </span>
+
+  <span {{action 'likePerson'}} class="upvote">
+    {{fa-icon "heart"}}
+  </span>
+
+
+</p>
